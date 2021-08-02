@@ -1,0 +1,42 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "8146b36f-101c-4d62-bf3f-06cef5e90456"
+  },
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ngx-newrelic": {
+      "projectType": "library",
+      "root": "projects/ngx-newrelic",
+      "sourceRoot": "projects/ngx-newrelic/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-newrelic/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-newrelic/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-newrelic/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-newrelic/src/test.ts",
+            "tsConfig": "projects/ngx-newrelic/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-newrelic/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-newrelic"
+}
