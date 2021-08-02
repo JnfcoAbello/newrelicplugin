@@ -1,6 +1,7 @@
 export interface IParams {
     licenseKey: string,
     message: string,
-    optional?: Map<string,Object>
+    optional?: Map<string,any>,
+    headers?: Map<string,any>
   }
   

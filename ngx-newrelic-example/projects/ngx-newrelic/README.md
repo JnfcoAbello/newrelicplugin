@@ -1,24 +1,30 @@
-# NgxNewrelic
+# NGX-Newrelic 
+Library for angular 2+.
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
+## Current Version
+**0.0.2** - 02/08/2021
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project ngx-newrelic` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-newrelic`.
-> Note: Don't forget to add `--project ngx-newrelic` or else it will be added to the default project in your `angular.json` file. 
+    npm i ngx-newrelic
 
-## Build
+## Documentation
+This plugin has a service that allow call to new-relic api.
 
-Run `ng build ngx-newrelic` to build the project. The build artifacts will be stored in the `dist/` directory.
+### method:
 
-## Publishing
+    newRelicLog (params:IParams): Promise<any>{....}
+    
+   IParams is an interface that belongs:
+   
+    {
+     licenseKey: string,
+     message: string,
+     optional?: Map<string,any>
+     headers?: Map<string,any>
+    }
 
-After building your library with `ng build ngx-newrelic`, go to the dist folder `cd dist/ngx-newrelic` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ngx-newrelic` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ - **licenseKey**: Field 'required' of api account.
+ - **message** : Field 'requeried' in new relic that allow to show in message list in the platform.
+ - **optional** (Optional): Aditional information in logs.
+ - **headers** (Optional) : Aditional headers in requests.
