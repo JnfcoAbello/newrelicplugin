@@ -2,7 +2,7 @@
 Library for angular 2+.
 
 ## Current Version
-**0.0.2** - 02/08/2021
+**0.0.4** - 02/08/2021
 
 ## Installation
 
@@ -14,7 +14,8 @@ This plugin has a service that allow call to new-relic api.
 ### method:
 
     newRelicLog (params:IParams): Promise<any>{....}
-    
+    Async newRelicLogAsync (params:IParams): Promise<any>{....}
+
    IParams is an interface that belongs:
    
     {
@@ -28,3 +29,6 @@ This plugin has a service that allow call to new-relic api.
  - **message** : Field 'requeried' in new relic that allow to show in message list in the platform.
  - **optional** (Optional): Aditional information in logs.
  - **headers** (Optional) : Aditional headers in requests.
+
+## Repository
+[Click go to reposotory](https://github.com/JnfcoAbello/ngx-newrelic)
